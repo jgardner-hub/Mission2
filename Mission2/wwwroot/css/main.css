@@ -1,0 +1,84 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DDF4FF;
+}
+
+h1, h2, h3, .submitter {
+    color: navy;
+}
+
+img {
+    max-width: 60%;
+}
+
+.cont {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption {
+    font-size: .7rem;
+    margin-bottom: 40px;
+    color: gray;
+}
+
+.titley {
+    margin-top: 15px;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.outputCont {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.outputCont * {
+    margin: 5px;
+}
+
+.card p {
+    text-align: center;
+}
+.card{
+    width: 45%;
+}
+
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.calculator label {
+    flex: 50%;
+    height: 2em;
+}
+
+.gradeInput {
+    flex: 50%;
+    height: 1.5em;
+    overflow: hidden;
+    align-self: center;
+}
+
+.instructions {
+    font-size: .7rem;
+}
+
+.submitter {
+    flex: 30%;
+    width: 30% !important;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
