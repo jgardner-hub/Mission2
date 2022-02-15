@@ -1,22 +1,15 @@
 ﻿
-$(document).ready(function () {
-    $("#perc").val() = "---";
-    $("#letter").val() = "---";
-});
-
-
 $("#btnsend").click(function () {
 
-    var assignment = parseFloat($("#assignments").val()) * .55;
-    var groupProj = parseFloat($("#gprojects").val()) * .05;
-    var quiz = parseFloat($("#quizzes").val()) * .1;
-    var exam = parseFloat($("#exams").val()) * .2;
-    var intex = parseFloat($("#intex").val()) * .1;
+    var assignment = (parseFloat($("#assignments").val()) * .55).toFixed(2);
+    var groupProj = (parseFloat($("#gprojects").val()) * .05).toFixed(2);
+    var quiz = (parseFloat($("#quizzes").val()) * .1).toFixed(2);
+    var exam = (parseFloat($("#exams").val()) * .2).toFixed(2);
+    var intex = (parseFloat($("#intex").val()) * .1).toFixed(2);
     var combPerc;
     var letGrade;
     var finalPerc;
-
-    combPerc = (assignment + groupProj + quiz + exam + intex) * 100;
+    combPerc = (parseFloat(assignment) + parseFloat(groupProj) + parseFloat(quiz) + parseFloat(exam) + parseFloat(intex)).toFixed(2);
     finalPerc = String(combPerc) + "%";
 
 
@@ -48,9 +41,9 @@ $("#btnsend").click(function () {
 
 
 
-    //$("#perc").html() = finalPerc;
-    //$("#letter").html() = letGrade;
-    document.getElementById("perc").innerHTML = finalPerc;
-    document.getElementById("letter").innerHTML = letGrade;
+    $("#perc").html(finalPerc);
+    $("#letter").html(letGrade);
+    //document.getElementById("perc").innerHTML = finalPerc;
+    //document.getElementById("letter").innerHTML = letGrade;
 
 })
