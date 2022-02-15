@@ -7,17 +7,18 @@ $(document).ready(function () {
 
 $("#btnsend").click(function () {
 
-    var assignment = parseFloat($("#assignments").val());
-    var groupProj = parseFloat($("#gprojects").val());
-    var quiz = parseFloat($("#quizzes").val());
-    var exam = parseFloat($("#exams").val());
-    var intex = parseFloat($("#intex").val());
+    var assignment = parseFloat($("#assignments").val()) * .55;
+    var groupProj = parseFloat($("#gprojects").val()) * .05;
+    var quiz = parseFloat($("#quizzes").val()) * .1;
+    var exam = parseFloat($("#exams").val()) * .2;
+    var intex = parseFloat($("#intex").val()) * .1;
     var combPerc;
     var letGrade;
     var finalPerc;
 
-    combPerc = assignment + groupProj + quiz + exam + intex;
+    combPerc = (assignment + groupProj + quiz + exam + intex) * 100;
     finalPerc = String(combPerc) + "%";
+
 
     if (combPerc >= 94.0) {
         letGrade = "A";

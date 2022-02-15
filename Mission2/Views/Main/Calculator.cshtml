@@ -1,0 +1,132 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+<!--Build a JavaScript program that calculates and displays both a final percentage and a letter grade
+using the "Grade Calculator" form entries based on the weights listed in the syllabus. Use
+jQuery selectors (i.e. the "$") in your program-->
+<!--A "Grade Calculator" form that takes as input a percentage scored for each grade
+category listed in the syllabus-->
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #DDF4FF;
+    }
+
+    h1, h2, h3, .submitter {
+        color: navy;
+    }
+
+    img {
+        max-width: 60%;
+    }
+
+    .cont {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caption {
+        font-size: .7rem;
+        margin-bottom: 40px;
+        color: gray;
+    }
+
+    .titley {
+        margin-top: 15px;
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .outputCont {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+        .outputCont * {
+            margin: 5px;
+        }
+
+    .card p {
+        text-align: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .calculator {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin-bottom: 30px;
+    }
+
+        .calculator label {
+            flex: 50%;
+            height: 2em;
+        }
+
+    .gradeInput {
+        flex: 50%;
+        height: 1.5em;
+        overflow: hidden;
+        align-self: center;
+    }
+
+    .instructions {
+        font-size: .7rem;
+    }
+
+    .submitter {
+        flex: 30%;
+        width: 30% !important;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+</style>
+<h3>Calculate Your Final Grade!</h3>
+<p class="instructions">Please enter the percent you received for each category below as a number and without the percent sign (ie 20.5):</p>
+<form class="calculator">
+    <label>Assignments: </label>
+    <input class="gradeInput" type="text" id="assignments">
+    <br />
+
+    <label>Group Projects: </label>
+    <input class="gradeInput" type="text" id="gprojects">
+    <br />
+
+    <label>Quizzes: </label>
+    <input class="gradeInput" type="text" id="quizzes">
+    <br />
+
+    <label>Exams: </label>
+    <input class="gradeInput" type="text" id="exams">
+    <br />
+
+    <label>INTEX: </label>
+    <input class="gradeInput" type="text" id="intex">
+    <br /><br />
+
+    <input class="submitter btn" id="btnsend" type="button" value="Submit" />
+    <br />
+</form>
+
+<div class="outputCont">
+    <div class="card">
+        <h3>Your Final Percentage:</h3>
+        <p id="perc">---</p>
+    </div>
+    <div class="card">
+        <h3>Your Letter Grade:</h3>
+        <p id="letter">---</p>
+    </div>
+</div>
